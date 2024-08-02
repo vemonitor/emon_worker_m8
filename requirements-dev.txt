@@ -1,0 +1,9 @@
+pytest>=7.4.1
+coverage>=7.5.4
+pytest-cov>=5.0.0
+flake8>=7.1.0
+build>=1.2.1
+setuptools>=68.1.2
+wheel>=0.43.0
+ve-utils>=2.5.3
+vemonitor_m8>=0.0.4
