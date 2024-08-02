@@ -27,7 +27,7 @@ setup(
         "Programming Language :: Python :: 3.11",
     ],
     license='Apache',
-    packages=['test', 'vemonitor_m8'],
+    packages=['test', 'emon_worker_m8'],
     package_dir={
         'emon_worker_m8': 'emon_worker_m8',
         'test': 'test'
