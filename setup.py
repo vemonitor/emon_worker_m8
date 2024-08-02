@@ -32,23 +32,9 @@ setup(
         'emon_worker_m8': 'emon_worker_m8',
         'test': 'test'
     },
-    package_data={
-        'emon_worker_m8': [
-            'conf_manager/confFiles/*.yaml',
-            'conf_manager/confFiles/*.yml'
-        ],
-        'test': [
-            'conf/*.yaml',
-            'conf/*.yml'
-        ]
-    },
-    include_package_data=True,
     install_requires=[
         'requests',
-        'vemonitor_m8'
-        'jsonschema',
-        'pyyaml',
-        'simplejson',
+        'vemonitor_m8',
         've_utils',
     ],
     extras_require={
@@ -58,6 +44,6 @@ setup(
             "pytest-cov"
         ]
     },
-    python_requires='>3.5.2',
+    python_requires='>3.7.0',
     zip_safe=False
 )
