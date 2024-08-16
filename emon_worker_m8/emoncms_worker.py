@@ -118,6 +118,22 @@ class EmoncmsWorker(OutputWorker):
                 # If not sleep the needed time (see OutputWorker class)
                 self.respect_req_interval()
                 self.update_req_time()
+            else:
+                logger.warning(
+                    "[EmoncmsWorker::send_data] "
+                    "Unable to send input bulk from cache data."
+                )
+        else:
+            logger.warning(
+                "[EmoncmsWorker::send_data] "
+                "Unable to send input bulk, bad properties. "
+                "is_ready: %s - "
+                "is valid data: %s -  "
+                "is valid structure: %s -  ",
+                self.is_ready(),
+                Ut.is_dict(data, not_null=True),
+                Ut.is_dict(input_structure, not_null=True)
+            )
 
         return result
 
