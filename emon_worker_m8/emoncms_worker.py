@@ -59,11 +59,11 @@ class EmoncmsWorker(OutputWorker):
     def set_worker(self, worker: Union[dict, EmoncmsApp]) -> bool:
         """Set vedirect worker"""
         result = False
-        if EmoncmsWorker.is_connector(worker):
-            self.worker = EmoncmsApp(worker)
-            result = True
-        elif isinstance(worker, EmoncmsApp):
+        if isinstance(worker, EmoncmsApp):
             self.worker = worker
+            result = True
+        elif EmoncmsWorker.is_connector(worker):
+            self.worker = EmoncmsApp(worker)
             result = True
         return result
 
