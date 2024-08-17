@@ -10,7 +10,7 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name='emon_worker_m8',
-    version='0.0.1',
+    version='0.0.2',
     description='VeMonitor_m8 EmonCmsWorker Package',
     url='https://github.com/vemonitor/emon_worker_m8',
     author='Eli Serra',
